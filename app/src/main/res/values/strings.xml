@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">crypto</string>
+    <string name="app_name">Crypto Tracker</string>
+    <string name="error_msg">Something Went Wrong</string>
+    <string name="internet_error">No Internet Connection</string>
+    <string name="refresh">Refresh</string>
+    <string name="google_url">http://www.google.com/search?q=</string>
+    <string name="no_browser">Browser Not Found</string>
+    <string name="crypto_name">Crypto Name</string>
+    <string name="short_name">Short</string>
+    <string name="market_price">Market Price</string>
+    <string name="change">change</string>
 </resources>
