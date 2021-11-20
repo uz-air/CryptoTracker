@@ -20,17 +20,13 @@ fun Context.isNetworkConnected(): Boolean {
             networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
 }
 
-fun String.openLinkInBrowser(view: View) {
-    if (view.context == null) return
+fun String.openLinkInBrowser(context: Context?) {
+    if (context == null) return
     val urlIntent = Intent(Intent.ACTION_VIEW, Uri.parse(this))
-    if (urlIntent.resolveActivity(view.context.packageManager) != null) {
-        view.context.startActivity(urlIntent)
-    } else {
-        view.context.getString(R.string.no_browser).makeSnack(view)
-    }
+    context.startActivity(urlIntent)
 }
 
 fun String.makeSnack(view: View) {
     Snackbar.make(view, this, Snackbar.LENGTH_SHORT)
-        .show()
+            .show()
 }

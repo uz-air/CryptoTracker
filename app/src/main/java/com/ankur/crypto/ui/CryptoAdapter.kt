@@ -54,7 +54,7 @@ class CryptoAdapter(private val dataSet: List<Data>?) :
             }
             binding.layout.setOnClickListener {
                 val url = it.context.getString(R.string.google_url) + dataSet.symbol
-                url.openLinkInBrowser(it)
+                url.openLinkInBrowser(it.context)
             }
         }
     }
